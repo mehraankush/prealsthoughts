@@ -1,3 +1,5 @@
+import React from "react";
+
 interface MonthsRecurrenceProps {
     daysOfWeek: string[];
     selectedNthDay: string;

@@ -1,3 +1,5 @@
+import React from "react";
+
 interface DaysRecurrenceProps {
     recurrenceInterval: number;
     setRecurrenceInterval: (value: number) => void;

@@ -18,6 +18,7 @@ import MonthsRecurrence from './MonthRecurrence';
 import RenderMonths from './RenderMonths';
 
 
+
 type RecurrenceType = 'days' | 'weeks' | 'months' | 'years';
 type PresetFilter = 'custom' | 'daily' | 'monthly' | 'yearly';
 
@@ -26,7 +27,7 @@ interface RecurringDatePickerProps {
     initialEndDate?: Date;
 }
 
-const RecurringDatePicker: React.FC<RecurringDatePickerProps> = ({
+const CalenderPicker: React.FC<RecurringDatePickerProps> = ({
     initialStartDate = new Date(),
     initialEndDate,
 }) => {
@@ -154,8 +155,9 @@ const RecurringDatePicker: React.FC<RecurringDatePickerProps> = ({
 
             <div className='flex  flex-col sm:flex-row gap-10  justify-between mb-5 text-gray-700'>
                 <div className=' flex-1'>
-                    <label className=" text-sm font-medium ">Start Date</label>
+                    <label htmlFor="start-date"   className=" text-sm font-medium ">Start Date</label>
                     <input
+                        id="start-date"
                         type="date"
                         value={format(startDate, 'yyyy-MM-dd')}
                         onChange={(e) => setStartDate(new Date(e.target.value))}
@@ -235,4 +237,4 @@ const RecurringDatePicker: React.FC<RecurringDatePickerProps> = ({
     );
 };
 
-export default RecurringDatePicker;
+export default CalenderPicker;

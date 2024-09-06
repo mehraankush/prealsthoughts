@@ -1,9 +1,9 @@
-import React from 'react'
-import Slider from 'react-slick'
-
-const daysOfWeek: string[] = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+import React from 'react';
+import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
+const daysOfWeek: string[] = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 type RenderMonthsProps = {
     addMonths: (date: Date, amount: number) => Date,
